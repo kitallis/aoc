@@ -6,9 +6,7 @@
 
 [day1.rs](2019/src/day1.rs)
 
-### Running
-
-#### Install
+### Install
 
 Install Rust 2018 edition (if you don't have it already)
 
@@ -16,13 +14,13 @@ Install Rust 2018 edition (if you don't have it already)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-#### Build
+### Build
 
 ```
 cargo build
 ```
 
-#### Run
+### Run
 
 Run solution for a particular day
 ```
