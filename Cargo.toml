@@ -3,10 +3,10 @@ name = "aoc19"
 version = "0.1.0"
 authors = ["Akshay Gupta <kitallis@gmail.com>"]
 edition = "2018"
-default-run = "day1"
+default-run = "2019_day1"
 
 [dependencies]
 
 [[bin]]
-name = "day1"
-path = "src/day1.rs"
+name = "2019_day1"
+path = "2019/src/day1.rs"

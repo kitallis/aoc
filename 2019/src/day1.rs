@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::BufRead;
 use std::io::BufReader;
 
-static PUZZLE_INPUT: &str = "input/day1";
+static PUZZLE_INPUT: &str = "2019/input/day1";
 
 fn main() {
     println!("Hello, world!");
