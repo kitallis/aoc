@@ -10,3 +10,7 @@ default-run = "2019_day1"
 [[bin]]
 name = "2019_day1"
 path = "2019/src/day1.rs"
+
+[[bin]]
+name = "2019_day2"
+path = "2019/src/day2.rs"

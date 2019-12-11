@@ -1,4 +1,4 @@
-use std::fs;
+use std::fs::read_to_string;
 
 static PUZZLE_INPUT: &str = "2019/input/day1";
 
@@ -18,7 +18,7 @@ fn fuel_of_fuel(mass: u64) -> u64 {
 
 fn main() {
     let total_fuel_requirement =
-        fs::read_to_string(PUZZLE_INPUT)
+        read_to_string(PUZZLE_INPUT)
             .unwrap()
             .lines()
             .fold(0, |aggregate: u64, line|
@@ -26,7 +26,7 @@ fn main() {
             );
 
     let total_fuel_of_fuel_requirement =
-        fs::read_to_string(PUZZLE_INPUT)
+        read_to_string(PUZZLE_INPUT)
             .unwrap()
             .lines()
             .fold(0, |aggregate: u64, line|
@@ -34,7 +34,7 @@ fn main() {
             );
 
 
-    println!("{}, {}", total_fuel_requirement, total_fuel_of_fuel_requirement)
+    println!("day1.a: {}, day1.b: {}", total_fuel_requirement, total_fuel_of_fuel_requirement)
 }
 
 #[cfg(test)]
