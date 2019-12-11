@@ -4,8 +4,8 @@
 
 ### Solutions
 
-[day1.rs](2019/src/day1.rs)
-[day2.rs](2019/src/day2.rs)
+- [day1.rs](2019/src/day1.rs)
+- [day2.rs](2019/src/day2.rs)
 
 ### Install
 
