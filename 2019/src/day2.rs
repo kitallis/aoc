@@ -1,5 +1,8 @@
 use std::fs::read_to_string;
 use std::vec::Vec;
+use std::option::Option::None;
+use std::option::Option;
+use std::option::Option::Some;
 
 static PUZZLE_INPUT: &str = "2019/input/day2";
 
@@ -22,8 +25,23 @@ fn computer(mut codes: Vec<u64>) -> Vec<u64> {
     codes
 }
 
+fn intcoder(codes: Vec<u64>, goal: u64) -> Option<u64> {
+    for noun in 0..100 {
+        for verb in 0..100 {
+            let mut instructions = codes.clone(); // reset memory
+
+            instructions[1] = noun;
+            instructions[2] = verb;
+
+            if computer(instructions)[0] == goal { return Some(100 * noun + verb); }
+        }
+    }
+
+    None
+}
+
 fn main() {
-    let mut codes: Vec<u64> =
+    let codes: Vec<u64> =
         read_to_string(PUZZLE_INPUT)
             .unwrap()
             .trim()
@@ -31,10 +49,13 @@ fn main() {
             .map(|code| code.parse().unwrap())
             .collect();
 
-    codes[1] = 12;
-    codes[2] = 2;
+    let mut instructions = codes.clone();
+    instructions[1] = 12;
+    instructions[2] = 2;
 
-    println!("{}", computer(codes)[0])
+    println!("day2.a: {}, day2.b: {:?}",
+             computer(instructions)[0],
+             intcoder(codes.clone(), 19_690_720).unwrap())
 }
 
 #[cfg(test)]
