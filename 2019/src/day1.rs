@@ -22,7 +22,7 @@ fn main() {
             .unwrap()
             .lines()
             .fold(0, |aggregate: u64, line|
-                aggregate + fuel(line.parse().unwrap()),
+                aggregate + fuel(line.parse().unwrap())
             );
 
     let total_fuel_of_fuel_requirement =
@@ -30,7 +30,7 @@ fn main() {
             .unwrap()
             .lines()
             .fold(0, |aggregate: u64, line|
-                aggregate + fuel_of_fuel(line.parse().unwrap()),
+                aggregate + fuel_of_fuel(line.parse().unwrap())
             );
 
 
