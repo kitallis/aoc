@@ -6,11 +6,11 @@ static PUZZLE_INPUT: &str = "2019/input/day3";
 type Point = (i16, i16);
 
 fn parse_cmd(cmd: &str) {
-    match cmd[..1] {
-        'U' => println!("{}", cmd),
-        'R' => println!("{}", cmd),
-        'D' => println!("{}", cmd),
-        'L' => println!("{}", cmd),
+    match &cmd[..1] {
+        "U" => println!("{}", cmd),
+        "R" => println!("{}", cmd),
+        "D" => println!("{}", cmd),
+        "L" => println!("{}", cmd),
 
         _ => unreachable!()
     }
@@ -30,7 +30,7 @@ fn main() {
             .collect();
 
     for wire_path in wire_paths[0] {
-        parse_cmd(wire_path)
+        parse_cmd(&wire_path)
     }
 
     println!("{:?}", wire_paths)
