@@ -11,3 +11,6 @@ File.read("i").split("\n").map{|l|l.split(" ").then{|d|Range.new(*d[0].split("-"
 File.read("i").split("\n").map{|l|l.split(" ").then{|d|c=d[1].chop;r=d[0].split("-").map{|i|i.to_i-1};[d[2][r[0]],d[2][r[1]]].one?{|_c|_c==c}}}.count(&:itself)
 # attempt 2
 File.read("i").split("\n").map{|l|l.split(" ").then{|d|c=d[1].chop;r=d[0].split("-").map{|i|i.to_i-1};(d[2][r[0]]==c)^(d[2][r[1]]==c)}}.count(&:itself)
+
+# day 3, part 1
+File.read("i").split("\n").drop(1).reduce([3,0]){|xt,p|p[xt[0]]=="#"?xt[1]=xt[1]+1:0;xt[0]=(xt[0]+3)%31;xt}[1]
